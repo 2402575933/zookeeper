@@ -32,7 +32,7 @@ public class DistributeClientTest {
     public void getConnection() throws IOException {
         zk = new ZooKeeper(connectString, sessionTimeout, new Watcher() {
             @Override
-            public void process(WatchedEvent watchedEvent) {
+            public void process(WatchedEvent watchedEvent) { 
                 try {
                     getChildrenList();
                 } catch (InterruptedException e) {
